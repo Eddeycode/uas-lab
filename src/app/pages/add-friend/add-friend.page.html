@@ -16,9 +16,8 @@
         <ion-img src="{{orang.imageUrl}}"></ion-img>
       </ion-avatar>
       <ion-label>{{orang.nDepan}} {{orang.nBelakang}} </ion-label>
-      <ion-button (click)="addFriend(orang)"
-        ><ion-icon name="add"></ion-icon
-      ></ion-button>
+      <ion-button (click)="addFriend(orang)" fill="clear" color="medium"
+        ><ion-icon name="person-add-outline"></ion-icon></ion-button>
     </ion-item>
     <ion-item *ngIf="userAll == null" color="dark">
       <ion-label>No More Friends to add</ion-label>
