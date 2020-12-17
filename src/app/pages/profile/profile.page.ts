@@ -86,7 +86,7 @@ export class ProfilePage implements OnInit {
 
   async presentToast() {
     let toast = this.toastCtrl.create({
-      message: "Uploaded",
+      message: "Uploaded successfully",
       color: "primary",
       duration: 1000,
       position: "bottom",
@@ -96,7 +96,7 @@ export class ProfilePage implements OnInit {
   }
   async presentToastDelete() {
     let toast = this.toastCtrl.create({
-      message: "Deleted",
+      message: "Deleted successfully",
       color: "primary",
       duration: 1000,
       position: "bottom",
@@ -107,7 +107,7 @@ export class ProfilePage implements OnInit {
 
   async presentToast2() {
     let toast = this.toastCtrl.create({
-      message: "Logged Out",
+      message: "Logged out successfully",
       color: "primary",
       duration: 1000,
       position: "bottom",
@@ -118,7 +118,7 @@ export class ProfilePage implements OnInit {
 
   async presentLoading2() {
     const loading = await this.loadingCtrl.create({
-      message: "Exiting....",
+      message: "Logging out",
       duration: 5000,
     });
     await loading.present();

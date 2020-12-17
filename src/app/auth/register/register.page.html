@@ -4,11 +4,23 @@
       <ion-item>
         <ion-card *ngIf="photo">
           <ion-card-content>
-            <img class="profile-picture" [src]="photo" (click)="getPicture('gallery')">
-            <input type="file" *ngIf="isDesktop" #filePicker (change)="onFileChoose($event)"/>
+            <img class="profile-picture" [src]="photo">
           </ion-card-content>
         </ion-card>
       </ion-item>
+    <ion-item>
+      <ion-buttons>
+        <ion-button size="small" (click)="getPicture('camera')" expand="block" class="center" slot="start">
+          <ion-icon name="camera" slot="start"></ion-icon>
+        </ion-button>
+    
+        <ion-button size="small" (click)="getPicture('gallery')" expand="block" class="center" slot="end">
+          <ion-icon name="image" slot="start"></ion-icon>
+        </ion-button>
+      </ion-buttons>
+
+      <input type="file" *ngIf="isDesktop" #filePicker (change)="onFileChoose($event)"/>
+    </ion-item>
     <ion-item>
       <ion-label position="floating" color="primary">Nama Depan</ion-label>
       <ion-input type="text" formControlName="nDepan"></ion-input>
@@ -60,8 +72,8 @@
     </div>
   </ion-list>
   <ion-button class="submit-btn" type="submit" expand="block" color="primary" style="text-transform: initial; padding-top: 10px; "[disabled]="!validations_form.valid">Register</ion-button>
-    <label class="error-message" style="padding: 15px; color:#d90000;">{{errorMessage}}</label>
-    <label class="success-message" style="padding: 15px">{{successMessage}}</label>
+    <label class="error-message">{{errorMessage}}</label>
+    <label class="success-message">{{successMessage}}</label>
   </form>
   <ion-button
     class="ion-padding"
