@@ -1,0 +1,7 @@
+{
+  "name": "uas-lab",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
