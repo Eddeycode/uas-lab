@@ -1,0 +1,22 @@
+<ion-header>
+  <ion-toolbar color="secondary">
+    <ion-title class="ion-text-center"> Hi, {{namaDepan}} {{namaBelakang}} ! </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content color="dark">
+  <ion-grid  color="dark">
+
+      <h3 class="ion-text-center"> Your email address: {{userEmail}} </h3>
+
+    <ion-col>
+      <ion-card *ngIf="photo">
+        <ion-card-content>
+          <img [src]="photo" />
+        </ion-card-content>
+      </ion-card>
+    </ion-col>
+    <ion-button expand="block" color="danger" (click)="logout()">Log Out</ion-button>
+  </ion-grid>
+  
+</ion-content>
