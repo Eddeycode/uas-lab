@@ -10,7 +10,6 @@
     (ionChange)="setFilteredItems()"
     #mySearchbar
   ></ion-searchbar>
-  <ion-list color="dark">
     <ion-item *ngFor="let orang of user" color="dark" class="item">
       <ion-avatar>
         <ion-img src="{{orang.imageUrl}}"></ion-img>
@@ -22,5 +21,4 @@
     <ion-item *ngIf="userAll == null" color="dark">
       <ion-label>No More Friends to add</ion-label>
     </ion-item>
-  </ion-list>
 </ion-content>
