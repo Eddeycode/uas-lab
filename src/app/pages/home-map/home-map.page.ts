@@ -193,6 +193,7 @@ export class HomeMapPage implements OnInit {
       this.checkAuto();
     }, 600000);
   }
+  
   checkAuto() {
     if (navigator.geolocation) {
       navigator.geolocation.getCurrentPosition((position) => {
