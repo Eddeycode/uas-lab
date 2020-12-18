@@ -16,7 +16,7 @@
   </ion-grid>
 
   <ion-grid>
-    <ion-item *ngFor="let data of myFeed" color="dark">
+    <ion-item *ngFor="let data of myFeed" color="dark" class="item">
       <ion-label>You logged in at: {{data.time| date:'mediumDate'}}</ion-label>
       <ion-buttons>
         <ion-button (click)="deleteFeed(data.key)"
